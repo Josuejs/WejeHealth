@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "728760158680",
+    "project_id": "clone1-3bcac",
+    "storage_bucket": "clone1-3bcac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728760158680:android:e5b4cb63840c71ba6ccaad",
+        "android_client_info": {
+          "package_name": "com.mycompany.crmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728760158680-49e21mpr30m5ta2lk2md4ocbo896nki2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0E3fviMS0IZ5wblGqvqlwIzktNnG6oCc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728760158680-49e21mpr30m5ta2lk2md4ocbo896nki2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "728760158680-eosdabc0kktu8lrq65gahc31v0fh97p0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.crmapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
