@@ -285,7 +285,7 @@ class _UserDetailsCopyWidgetState extends State<UserDetailsCopyWidget>
                               FFLocalizations.of(context).getText(
                                 '1ahxryda' /* Nombre del Doctor */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyText2,
+                              style: FlutterFlowTheme.of(context).bodySmall,
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation1']!),
                             Padding(
@@ -296,7 +296,8 @@ class _UserDetailsCopyWidgetState extends State<UserDetailsCopyWidget>
                                   'hnmvhpzk' /* Eladio Carrion */,
                                 ),
                                 textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context).title2,
+                                style:
+                                    FlutterFlowTheme.of(context).headlineMedium,
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation2']!),
                             ),
@@ -316,7 +317,7 @@ class _UserDetailsCopyWidgetState extends State<UserDetailsCopyWidget>
                           FFLocalizations.of(context).getText(
                             'bg4i3uhn' /* Ocupación */,
                           ),
-                          style: FlutterFlowTheme.of(context).bodyText2,
+                          style: FlutterFlowTheme.of(context).bodySmall,
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation3']!),
                         Padding(
@@ -327,7 +328,7 @@ class _UserDetailsCopyWidgetState extends State<UserDetailsCopyWidget>
                               'ghpxzzrl' /* Odontologo */,
                             ),
                             textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context).subtitle1,
+                            style: FlutterFlowTheme.of(context).titleMedium,
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation4']!),
                         ),
@@ -391,13 +392,14 @@ class _UserDetailsCopyWidgetState extends State<UserDetailsCopyWidget>
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: Color(0xFF39D29D),
                         textStyle: FlutterFlowTheme.of(context)
-                            .subtitle2
+                            .titleSmall
                             .override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).subtitle2Family,
+                                  FlutterFlowTheme.of(context).titleSmallFamily,
                               color: FlutterFlowTheme.of(context).primaryText,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).subtitle2Family),
+                                  FlutterFlowTheme.of(context)
+                                      .titleSmallFamily),
                             ),
                         elevation: 10.0,
                         borderSide: BorderSide(

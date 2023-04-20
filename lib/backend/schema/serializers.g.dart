@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PatientsInfoRecord.serializer)
+      ..add(SensorDataRecord.serializer)
       ..add(UsersRecord.serializer))
     .build();
 

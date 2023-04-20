@@ -6,7 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
 
-import '../../auth/firebase_user_provider.dart';
+import '../../auth/base_auth_user_provider.dart';
 
 import '../../index.dart';
 import '../../main.dart';
@@ -20,8 +20,8 @@ export 'serialization_util.dart';
 const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
-  WejeTeleHealthFirebaseUser? initialUser;
-  WejeTeleHealthFirebaseUser? user;
+  BaseAuthUser? initialUser;
+  BaseAuthUser? user;
   bool showSplashImage = true;
   String? _redirectLocation;
 
@@ -46,7 +46,7 @@ class AppStateNotifier extends ChangeNotifier {
   /// to perform subsequent actions (such as navigation) afterwards.
   void updateNotifyOnAuthChange(bool notify) => notifyOnAuthChange = notify;
 
-  void update(WejeTeleHealthFirebaseUser newUser) {
+  void update(BaseAuthUser newUser) {
     initialUser ??= newUser;
     user = newUser;
     // Refresh the app on auth change unless explicitly marked otherwise.
@@ -69,13 +69,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? HomeWidget() : LoginWidget(),
+          appStateNotifier.loggedIn ? HomeWidget() : OnboardingPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomeWidget() : LoginWidget(),
+              appStateNotifier.loggedIn ? HomeWidget() : OnboardingPageWidget(),
           routes: [
             FFRoute(
               name: 'createAccount',
@@ -100,17 +100,18 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Home',
               path: 'home',
-              builder: (context, params) => HomeWidget(),
+              builder: (context, params) => HomeWidget(
+                idPacientes2: params.getParam('idPacientes2',
+                    ParamType.DocumentReference, false, ['PatientsInfo']),
+              ),
             ),
             FFRoute(
               name: 'Main_customerList',
               path: 'mainCustomerList',
-              builder: (context, params) => MainCustomerListWidget(),
-            ),
-            FFRoute(
-              name: 'AddUser',
-              path: 'addUser',
-              builder: (context, params) => AddUserWidget(),
+              builder: (context, params) => MainCustomerListWidget(
+                idPaciente2: params.getParam('idPaciente2',
+                    ParamType.DocumentReference, false, ['PatientsInfo']),
+              ),
             ),
             FFRoute(
               name: 'Main_customerListCopy',
@@ -118,10 +119,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => MainCustomerListCopyWidget(),
             ),
             FFRoute(
+              name: 'AddUser',
+              path: 'addUser',
+              builder: (context, params) => AddUserWidget(),
+            ),
+            FFRoute(
               name: 'userDetails',
               path: 'userDetails',
               builder: (context, params) => UserDetailsWidget(
-                idPaciente: params.getParam('idPaciente',
+                idPaciente2: params.getParam('idPaciente2',
                     ParamType.DocumentReference, false, ['PatientsInfo']),
               ),
             ),
@@ -131,14 +137,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => UserDetailsCopyWidget(),
             ),
             FFRoute(
-              name: 'Schedule',
-              path: 'schedule',
-              builder: (context, params) => ScheduleWidget(),
+              name: 'OnboardingPage',
+              path: 'onboardingPage',
+              builder: (context, params) => OnboardingPageWidget(),
             ),
             FFRoute(
-              name: 'Test',
-              path: 'test',
-              builder: (context, params) => TestWidget(),
+              name: 'CitasAgendadas',
+              path: 'citasAgendadas',
+              asyncParams: {
+                'idPacientes2':
+                    getDoc(['PatientsInfo'], PatientsInfoRecord.serializer),
+              },
+              builder: (context, params) => CitasAgendadasWidget(
+                idPacientes2:
+                    params.getParam('idPacientes2', ParamType.Document),
+              ),
+            ),
+            FFRoute(
+              name: 'OverviewConditions',
+              path: 'overviewConditions',
+              builder: (context, params) => OverviewConditionsWidget(),
+            ),
+            FFRoute(
+              name: 'Profile_Doctor',
+              path: 'profileDoctor',
+              builder: (context, params) => ProfileDoctorWidget(),
+            ),
+            FFRoute(
+              name: 'OximeterDataList',
+              path: 'oximeterDataList',
+              builder: (context, params) => OximeterDataListWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -309,7 +337,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/login';
+            return '/onboardingPage';
           }
           return null;
         },
@@ -327,7 +355,7 @@ class FFRoute {
                     width: 50.0,
                     height: 50.0,
                     child: CircularProgressIndicator(
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: FlutterFlowTheme.of(context).primary,
                     ),
                   ),
                 )

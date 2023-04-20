@@ -49,7 +49,7 @@ class _DoctorWelcomeWidgetState extends State<DoctorWelcomeWidget> {
         children: [
           Card(
             clipBehavior: Clip.antiAliasWithSaveLayer,
-            color: FlutterFlowTheme.of(context).secondaryColor,
+            color: FlutterFlowTheme.of(context).secondary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50.0),
             ),
@@ -73,11 +73,12 @@ class _DoctorWelcomeWidgetState extends State<DoctorWelcomeWidget> {
               FFLocalizations.of(context).getText(
                 'd755wn9w' /* Hello,  */,
               ),
-              style: FlutterFlowTheme.of(context).title3.override(
-                    fontFamily: FlutterFlowTheme.of(context).title3Family,
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    useGoogleFonts: GoogleFonts.asMap()
-                        .containsKey(FlutterFlowTheme.of(context).title3Family),
+              style: FlutterFlowTheme.of(context).headlineSmall.override(
+                    fontFamily:
+                        FlutterFlowTheme.of(context).headlineSmallFamily,
+                    color: FlutterFlowTheme.of(context).primary,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).headlineSmallFamily),
                   ),
             ),
           ),
@@ -87,11 +88,12 @@ class _DoctorWelcomeWidgetState extends State<DoctorWelcomeWidget> {
               FFLocalizations.of(context).getText(
                 '6vdrzx9x' /* Andrew */,
               ),
-              style: FlutterFlowTheme.of(context).title3.override(
-                    fontFamily: FlutterFlowTheme.of(context).title3Family,
+              style: FlutterFlowTheme.of(context).headlineSmall.override(
+                    fontFamily:
+                        FlutterFlowTheme.of(context).headlineSmallFamily,
                     color: FlutterFlowTheme.of(context).primaryText,
-                    useGoogleFonts: GoogleFonts.asMap()
-                        .containsKey(FlutterFlowTheme.of(context).title3Family),
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).headlineSmallFamily),
                   ),
             ),
           ),

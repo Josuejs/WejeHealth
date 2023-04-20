@@ -31,6 +31,12 @@ class FFAppState extends ChangeNotifier {
   set ImgPaciente(String _value) {
     _ImgPaciente = _value;
   }
+
+  bool _ShowFullList = false;
+  bool get ShowFullList => _ShowFullList;
+  set ShowFullList(bool _value) {
+    _ShowFullList = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

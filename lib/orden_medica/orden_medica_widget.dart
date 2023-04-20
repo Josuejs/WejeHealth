@@ -40,31 +40,21 @@ class _OrdenMedicaWidgetState extends State<OrdenMedicaWidget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        automaticallyImplyLeading: false,
-        title: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(500.0, 0.0, 0.0, 0.0),
-          child: Text(
-            FFLocalizations.of(context).getText(
-              '4067vzsk' /* Orden Médica */,
-            ),
-            style: FlutterFlowTheme.of(context).title1,
-          ),
-        ),
-        actions: [],
-        centerTitle: false,
-        elevation: 0.0,
-      ),
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBtnText,
+        body: SafeArea(
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
+              Expanded(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [],
+                ),
+              ),
               Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
@@ -77,8 +67,8 @@ class _OrdenMedicaWidgetState extends State<OrdenMedicaWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(
                             100.0, 0.0, 0.0, 0.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            context.safePop();
                           },
                           text: FFLocalizations.of(context).getText(
                             'ob9jwujf' /* Cancelar */,
@@ -92,15 +82,16 @@ class _OrdenMedicaWidgetState extends State<OrdenMedicaWidget> {
                                 0.0, 0.0, 0.0, 0.0),
                             color: Color(0xFFFF0004),
                             textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
+                                .titleSmall
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
+                                      .titleSmallFamily,
                                   color: Colors.white,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
+                                          .titleSmallFamily),
                                 ),
+                            elevation: 2.0,
                             borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
@@ -130,16 +121,17 @@ class _OrdenMedicaWidgetState extends State<OrdenMedicaWidget> {
                                   0.0, 0.0, 0.0, 0.0),
                               color: Color(0xFFFF9A23),
                               textStyle: FlutterFlowTheme.of(context)
-                                  .subtitle2
+                                  .titleSmall
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
-                                        .subtitle2Family,
+                                        .titleSmallFamily,
                                     color: Colors.white,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .subtitle2Family),
+                                                .titleSmallFamily),
                                   ),
+                              elevation: 2.0,
                               borderSide: BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,

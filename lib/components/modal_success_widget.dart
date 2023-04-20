@@ -256,7 +256,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                           width: 50.0,
                           height: 50.0,
                           child: CircularProgressIndicator(
-                            color: FlutterFlowTheme.of(context).primaryColor,
+                            color: FlutterFlowTheme.of(context).primary,
                           ),
                         ),
                       );
@@ -325,7 +325,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                               FFLocalizations.of(context).getText(
                                 'prrvm4b2' /* Send Contract Confirmation */,
                               ),
-                              style: FlutterFlowTheme.of(context).title3,
+                              style: FlutterFlowTheme.of(context).headlineSmall,
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation1']!),
                             Padding(
@@ -335,7 +335,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                 FFLocalizations.of(context).getText(
                                   'qc3ixn6d' /* A new contract has been genera... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyText2,
+                                style: FlutterFlowTheme.of(context).bodySmall,
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation2']!),
                             ),
@@ -394,7 +394,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                                       .nombreCompleto!,
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .subtitle1,
+                                                      .titleMedium,
                                                 ),
                                               ),
                                               Padding(
@@ -406,7 +406,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                                       .phoneNumber!,
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                                 ),
                                               ),
                                               Padding(
@@ -419,23 +419,23 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                                       .toString(),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2
+                                                      .bodySmall
                                                       .override(
                                                         fontFamily:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .bodyText2Family,
+                                                                .bodySmallFamily,
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primaryColor,
+                                                                .primary,
                                                         fontSize: 12.0,
                                                         useGoogleFonts: GoogleFonts
                                                                 .asMap()
                                                             .containsKey(
                                                                 FlutterFlowTheme.of(
                                                                         context)
-                                                                    .bodyText2Family),
+                                                                    .bodySmallFamily),
                                                       ),
                                                 ),
                                               ),
@@ -445,7 +445,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                         Icon(
                                           Icons.radio_button_checked,
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                           size: 24.0,
                                         ),
                                       ],
@@ -463,15 +463,15 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                   'pnfpavko' /* Next Steps */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
-                                    .bodyText1
+                                    .bodyMedium
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyText1Family,
+                                          .bodyMediumFamily,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText1Family),
+                                                  .bodyMediumFamily),
                                     ),
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation3']!),
@@ -483,7 +483,7 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                 FFLocalizations.of(context).getText(
                                   'dgj2iigq' /* Send the information below. An... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyText2,
+                                style: FlutterFlowTheme.of(context).bodySmall,
                               ).animateOnPageLoad(
                                   animationsMap['textOnPageLoadAnimation4']!),
                             ),
@@ -497,10 +497,11 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                     backgroundColor: Colors.transparent,
                                     barrierColor: Colors.transparent,
                                     context: context,
-                                    builder: (context) {
+                                    builder: (bottomSheetContext) {
                                       return Padding(
                                         padding:
-                                            MediaQuery.of(context).viewInsets,
+                                            MediaQuery.of(bottomSheetContext)
+                                                .viewInsets,
                                         child: Container(
                                           height: double.infinity,
                                           child: ModalWelcomeWidget(),
@@ -524,10 +525,11 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                   color:
                                       FlutterFlowTheme.of(context).tertiary400,
                                   textStyle:
-                                      FlutterFlowTheme.of(context).subtitle1,
+                                      FlutterFlowTheme.of(context).titleMedium,
+                                  elevation: 2.0,
                                   borderSide: BorderSide(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryColor,
+                                    color:
+                                        FlutterFlowTheme.of(context).secondary,
                                     width: 2.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
@@ -555,7 +557,8 @@ class _ModalSuccessWidgetState extends State<ModalSuccessWidget>
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   textStyle:
-                                      FlutterFlowTheme.of(context).subtitle2,
+                                      FlutterFlowTheme.of(context).titleSmall,
+                                  elevation: 2.0,
                                   borderSide: BorderSide(
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,

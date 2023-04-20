@@ -87,7 +87,8 @@ class _EditProfilePhotoCopyWidgetState
                               FFLocalizations.of(context).getText(
                                 '39vtxs1w' /* Temperatura */,
                               ),
-                              style: FlutterFlowTheme.of(context).title2,
+                              style:
+                                  FlutterFlowTheme.of(context).headlineMedium,
                             ),
                           ),
                         ),
@@ -104,7 +105,7 @@ class _EditProfilePhotoCopyWidgetState
                               FFLocalizations.of(context).getText(
                                 'ibw6hb2k' /* Upload a new photo below in or... */,
                               ),
-                              style: FlutterFlowTheme.of(context).bodyText2,
+                              style: FlutterFlowTheme.of(context).bodySmall,
                             ),
                           ),
                         ),
@@ -128,16 +129,17 @@ class _EditProfilePhotoCopyWidgetState
                                 0.0, 0.0, 0.0, 0.0),
                             color: Color(0xFFFE9024),
                             textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
+                                .titleSmall
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
+                                      .titleSmallFamily,
                                   color: Colors.white,
                                   fontSize: 16.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
+                                          .titleSmallFamily),
                                 ),
+                            elevation: 2.0,
                             borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,

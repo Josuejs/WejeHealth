@@ -1,13 +1,11 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'login_model.dart';
@@ -198,80 +196,6 @@ class _LoginWidgetState extends State<LoginWidget>
     'rowOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
-        VisibilityEffect(duration: 300.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 300.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-    'containerOnPageLoadAnimation1': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 700.ms),
-        FadeEffect(
-          curve: Curves.bounceOut,
-          delay: 700.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.bounceOut,
-          delay: 700.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 30.0),
-          end: Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.bounceOut,
-          delay: 700.ms,
-          duration: 600.ms,
-          begin: 0.4,
-          end: 1.0,
-        ),
-      ],
-    ),
-    'containerOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 900.ms),
-        FadeEffect(
-          curve: Curves.bounceOut,
-          delay: 900.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.bounceOut,
-          delay: 900.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 30.0),
-          end: Offset(0.0, 0.0),
-        ),
-        ScaleEffect(
-          curve: Curves.bounceOut,
-          delay: 900.ms,
-          duration: 600.ms,
-          begin: 0.4,
-          end: 1.0,
-        ),
-      ],
-    ),
-    'rowOnPageLoadAnimation4': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
         VisibilityEffect(duration: 1000.ms),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -320,11 +244,11 @@ class _LoginWidgetState extends State<LoginWidget>
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Scaffold(
-      key: scaffoldKey,
-      body: GestureDetector(
-        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-        child: Container(
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        body: Container(
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
@@ -376,9 +300,9 @@ class _LoginWidgetState extends State<LoginWidget>
                           ),
                           Text(
                             FFLocalizations.of(context).getText(
-                              'qp3pvs3s' /* Bienvenido! */,
+                              'qp3pvs3s' /* Welcome! */,
                             ),
-                            style: FlutterFlowTheme.of(context).title1,
+                            style: FlutterFlowTheme.of(context).displaySmall,
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation1']!),
                           Padding(
@@ -389,16 +313,16 @@ class _LoginWidgetState extends State<LoginWidget>
                                 'jkgh1cz4' /* Completa el formulario para cr... */,
                               ),
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText2
+                                  .bodySmall
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyText2Family,
+                                        .bodySmallFamily,
                                     color:
                                         FlutterFlowTheme.of(context).black600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText2Family),
+                                                .bodySmallFamily),
                                   ),
                             ).animateOnPageLoad(
                                 animationsMap['textOnPageLoadAnimation2']!),
@@ -423,11 +347,11 @@ class _LoginWidgetState extends State<LoginWidget>
                                           'uodv29wi' /* Email Address */,
                                         ),
                                         labelStyle: FlutterFlowTheme.of(context)
-                                            .bodyText2
+                                            .bodySmall
                                             .override(
                                               fontFamily:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2Family,
+                                                      .bodySmallFamily,
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryBtnText,
@@ -436,18 +360,18 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       .containsKey(
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText2Family),
+                                                              .bodySmallFamily),
                                             ),
                                         hintText:
                                             FFLocalizations.of(context).getText(
                                           'mmph7ous' /* Enter your email here... */,
                                         ),
                                         hintStyle: FlutterFlowTheme.of(context)
-                                            .bodyText2
+                                            .bodySmall
                                             .override(
                                               fontFamily:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2Family,
+                                                      .bodySmallFamily,
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryBtnText,
@@ -456,7 +380,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                       .containsKey(
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText2Family),
+                                                              .bodySmallFamily),
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: BorderSide(
@@ -497,17 +421,17 @@ class _LoginWidgetState extends State<LoginWidget>
                                                 16.0, 24.0, 0.0, 24.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText1
+                                          .bodyMedium
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText1Family,
+                                                    .bodyMediumFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText1Family),
+                                                        .bodyMediumFamily),
                                           ),
                                       validator: _model
                                           .emailAddressControllerValidator
@@ -536,34 +460,34 @@ class _LoginWidgetState extends State<LoginWidget>
                                         '8pzn9vzo' /* Password */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
+                                          .bodySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
+                                                    .bodySmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                                                        .bodySmallFamily),
                                           ),
                                       hintText:
                                           FFLocalizations.of(context).getText(
                                         'e8bsop8o' /* Enter your password here... */,
                                       ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
+                                          .bodySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
+                                                    .bodySmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                                                        .bodySmallFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -619,7 +543,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                       ),
                                     ),
                                     style:
-                                        FlutterFlowTheme.of(context).bodyText1,
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     validator: _model
                                         .passwordControllerValidator
                                         .asValidator(context),
@@ -652,17 +576,17 @@ class _LoginWidgetState extends State<LoginWidget>
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Color(0x00FFFFFF),
                                     textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
+                                        .bodySmall
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
+                                                  .bodySmallFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBtnText,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
+                                                      .bodySmallFamily),
                                         ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
@@ -676,7 +600,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                   onPressed: () async {
                                     GoRouter.of(context).prepareAuthEvent();
 
-                                    final user = await signInWithEmail(
+                                    final user =
+                                        await authManager.signInWithEmail(
                                       context,
                                       _model.emailAddressController.text,
                                       _model.passwordController.text,
@@ -684,6 +609,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                     if (user == null) {
                                       return;
                                     }
+
+                                    await authManager.sendEmailVerification();
 
                                     context.pushNamedAuth('Home', mounted);
                                   },
@@ -700,7 +627,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                     color: FlutterFlowTheme.of(context)
                                         .tertiary400,
                                     textStyle: FlutterFlowTheme.of(context)
-                                        .subtitle1
+                                        .titleMedium
                                         .override(
                                           fontFamily: 'Outfit',
                                           color: Colors.white,
@@ -709,7 +636,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .subtitle1Family),
+                                                      .titleMediumFamily),
                                         ),
                                     elevation: 2.0,
                                     borderSide: BorderSide(
@@ -726,125 +653,6 @@ class _LoginWidgetState extends State<LoginWidget>
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 24.0, 0.0, 12.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                AutoSizeText(
-                                  FFLocalizations.of(context).getText(
-                                    'rwnwfl7a' /* Use a social platform to conti... */,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyText2
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyText2Family,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBtnText,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family),
-                                      ),
-                                ),
-                              ],
-                            ).animateOnPageLoad(
-                                animationsMap['rowOnPageLoadAnimation3']!),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 8.0, 8.0, 8.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8.0, 8.0, 8.0, 8.0),
-                                  child: InkWell(
-                                    onTap: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      final user =
-                                          await signInWithGoogle(context);
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      context.goNamedAuth('Home', mounted);
-                                    },
-                                    child: Container(
-                                      width: 50.0,
-                                      height: 50.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .lineColor,
-                                        boxShadow: [
-                                          BoxShadow(
-                                            blurRadius: 5.0,
-                                            color: Color(0x3314181B),
-                                            offset: Offset(0.0, 2.0),
-                                          )
-                                        ],
-                                        shape: BoxShape.circle,
-                                      ),
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.google,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 24.0,
-                                      ),
-                                    ),
-                                  ).animateOnPageLoad(animationsMap[
-                                      'containerOnPageLoadAnimation1']!),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      8.0, 8.0, 8.0, 8.0),
-                                  child: InkWell(
-                                    onTap: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-                                      final user =
-                                          await signInWithApple(context);
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      context.goNamedAuth('Home', mounted);
-                                    },
-                                    child: Container(
-                                      width: 50.0,
-                                      height: 50.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .lineColor,
-                                        boxShadow: [
-                                          BoxShadow(
-                                            blurRadius: 5.0,
-                                            color: Color(0x3314181B),
-                                            offset: Offset(0.0, 2.0),
-                                          )
-                                        ],
-                                        shape: BoxShape.circle,
-                                      ),
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: FaIcon(
-                                        FontAwesomeIcons.apple,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 24.0,
-                                      ),
-                                    ),
-                                  ).animateOnPageLoad(animationsMap[
-                                      'containerOnPageLoadAnimation2']!),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 24.0, 0.0, 24.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -854,7 +662,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                   FFLocalizations.of(context).getText(
                                     'pabl6qyd' /* No tienes una cuenta? */,
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
                                 ),
                                 FFButtonWidget(
                                   onPressed: () async {
@@ -872,16 +681,16 @@ class _LoginWidgetState extends State<LoginWidget>
                                         0.0, 0.0, 0.0, 0.0),
                                     color: Color(0x00FFFFFF),
                                     textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText1Family,
+                                                  .bodyMediumFamily,
                                           fontWeight: FontWeight.bold,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1Family),
+                                                      .bodyMediumFamily),
                                         ),
                                     elevation: 0.0,
                                     borderSide: BorderSide(
@@ -892,7 +701,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 ),
                               ],
                             ).animateOnPageLoad(
-                                animationsMap['rowOnPageLoadAnimation4']!),
+                                animationsMap['rowOnPageLoadAnimation3']!),
                           ),
                         ],
                       ),

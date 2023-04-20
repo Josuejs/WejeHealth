@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -249,26 +249,6 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
         ),
       ],
     ),
-    'rowOnPageLoadAnimation3': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 1000.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 1000.ms,
-          duration: 600.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 1000.ms,
-          duration: 600.ms,
-          begin: Offset(0.0, 40.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
   };
 
   @override
@@ -301,12 +281,12 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-      body: GestureDetector(
-        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-        child: Container(
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        body: Container(
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
@@ -355,14 +335,17 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
-                            'lsi6s6dc' /* Bienvenido! */,
+                            'lsi6s6dc' /* Welcome! */,
                           ),
-                          style: FlutterFlowTheme.of(context).title1.override(
-                                fontFamily:
-                                    FlutterFlowTheme.of(context).title1Family,
+                          style: FlutterFlowTheme.of(context)
+                              .displaySmall
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .displaySmallFamily,
                                 color: FlutterFlowTheme.of(context).black600,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context).title1Family),
+                                    FlutterFlowTheme.of(context)
+                                        .displaySmallFamily),
                               ),
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
@@ -374,14 +357,14 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                               'dhmqmbpw' /* Use the form below to get star... */,
                             ),
                             style: FlutterFlowTheme.of(context)
-                                .bodyText2
+                                .bodySmall
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText2Family,
+                                      .bodySmallFamily,
                                   color: FlutterFlowTheme.of(context).black600,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText2Family),
+                                          .bodySmallFamily),
                                 ),
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation2']!),
@@ -406,34 +389,34 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                         'balwxjt0' /* Email Address */,
                                       ),
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
+                                          .bodySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
+                                                    .bodySmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                                                        .bodySmallFamily),
                                           ),
                                       hintText:
                                           FFLocalizations.of(context).getText(
                                         'q9mxthxm' /* Enter your email here... */,
                                       ),
                                       hintStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
+                                          .bodySmall
                                           .override(
                                             fontFamily:
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
+                                                    .bodySmallFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBtnText,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
+                                                        .bodySmallFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -474,7 +457,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                               16.0, 24.0, 0.0, 24.0),
                                     ),
                                     style:
-                                        FlutterFlowTheme.of(context).bodyText1,
+                                        FlutterFlowTheme.of(context).bodyMedium,
                                     validator: _model
                                         .emailAddressControllerValidator
                                         .asValidator(context),
@@ -502,34 +485,34 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                       'eflaavnq' /* Password */,
                                     ),
                                     labelStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
+                                        .bodySmall
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
+                                                  .bodySmallFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBtnText,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
+                                                      .bodySmallFamily),
                                         ),
                                     hintText:
                                         FFLocalizations.of(context).getText(
                                       '0kdevzd4' /* Enter your password here... */,
                                     ),
                                     hintStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
+                                        .bodySmall
                                         .override(
                                           fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
+                                                  .bodySmallFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBtnText,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
+                                                      .bodySmallFamily),
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
@@ -580,7 +563,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                       ),
                                     ),
                                   ),
-                                  style: FlutterFlowTheme.of(context).bodyText1,
+                                  style:
+                                      FlutterFlowTheme.of(context).bodyMedium,
                                   validator: _model.passwordControllerValidator
                                       .asValidator(context),
                                 ).animateOnPageLoad(animationsMap[
@@ -602,31 +586,31 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   '8xl9lhsy' /* Confirm Password */,
                                 ),
                                 labelStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
+                                    .bodySmall
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyText2Family,
+                                          .bodySmallFamily,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodySmallFamily),
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
                                   '7z1wf54p' /* Confirm password here... */,
                                 ),
                                 hintStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
+                                    .bodySmall
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyText2Family,
+                                          .bodySmallFamily,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodySmallFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -676,7 +660,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   ),
                                 ),
                               ),
-                              style: FlutterFlowTheme.of(context).bodyText1,
+                              style: FlutterFlowTheme.of(context).bodyMedium,
                               validator: _model
                                   .passwordConfirmControllerValidator
                                   .asValidator(context),
@@ -706,7 +690,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                     return;
                                   }
 
-                                  final user = await createAccountWithEmail(
+                                  final user =
+                                      await authManager.createAccountWithEmail(
                                     context,
                                     _model.emailAddressController.text,
                                     _model.passwordController.text,
@@ -730,15 +715,15 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   color:
                                       FlutterFlowTheme.of(context).tertiary400,
                                   textStyle: FlutterFlowTheme.of(context)
-                                      .subtitle1
+                                      .titleMedium
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
-                                            .subtitle1Family,
+                                            .titleMediumFamily,
                                         color: Colors.white,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .subtitle1Family),
+                                                    .titleMediumFamily),
                                       ),
                                   elevation: 2.0,
                                   borderSide: BorderSide(
@@ -765,16 +750,16 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
-                                    .bodyText2
+                                    .bodySmall
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyText2Family,
+                                          .bodySmallFamily,
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBtnText,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodySmallFamily),
                                     ),
                               ),
                             ],
@@ -794,8 +779,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 child: InkWell(
                                   onTap: () async {
                                     GoRouter.of(context).prepareAuthEvent();
-                                    final user =
-                                        await signInWithGoogle(context);
+                                    final user = await authManager
+                                        .signInWithGoogle(context);
                                     if (user == null) {
                                       return;
                                     }
@@ -834,7 +819,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 child: InkWell(
                                   onTap: () async {
                                     GoRouter.of(context).prepareAuthEvent();
-                                    final user = await signInWithApple(context);
+                                    final user = await authManager
+                                        .signInWithApple(context);
                                     if (user == null) {
                                       return;
                                     }
@@ -869,56 +855,6 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                               ),
                             ],
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 24.0, 0.0, 24.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'ehfwpsw1' /* Already have an account? */,
-                                ),
-                                style: FlutterFlowTheme.of(context).bodyText1,
-                              ),
-                              FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('Login');
-                                },
-                                text: FFLocalizations.of(context).getText(
-                                  '6ddiwrmk' /* Log In */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 70.0,
-                                  height: 30.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0x00FFFFFF),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .bodyText1
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyText1Family,
-                                        fontWeight: FontWeight.bold,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1Family),
-                                      ),
-                                  elevation: 0.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ).animateOnPageLoad(
-                              animationsMap['rowOnPageLoadAnimation3']!),
                         ),
                       ],
                     ),

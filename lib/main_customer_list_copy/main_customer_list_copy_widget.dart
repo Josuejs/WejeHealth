@@ -115,27 +115,27 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-      appBar: !isWeb
-          ? AppBar(
-              backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-              automaticallyImplyLeading: false,
-              title: Text(
-                FFLocalizations.of(context).getText(
-                  '675gzej9' /* Customers */,
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: !isWeb
+            ? AppBar(
+                backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+                automaticallyImplyLeading: false,
+                title: Text(
+                  FFLocalizations.of(context).getText(
+                    '675gzej9' /* Customers */,
+                  ),
+                  style: FlutterFlowTheme.of(context).displaySmall,
                 ),
-                style: FlutterFlowTheme.of(context).title1,
-              ),
-              actions: [],
-              centerTitle: false,
-              elevation: 0.0,
-            )
-          : null,
-      body: GestureDetector(
-        onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-        child: Row(
+                actions: [],
+                centerTitle: false,
+                elevation: 0.0,
+              )
+            : null,
+        body: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             if (responsiveVisibility(
@@ -155,7 +155,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                     ),
                     iconTwo: Icon(
                       Icons.group,
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      color: FlutterFlowTheme.of(context).primary,
                     ),
                     iconThree: Icon(
                       Icons.home_work_rounded,
@@ -225,7 +225,8 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                     FFLocalizations.of(context).getText(
                                       'li56ywd8' /* Doctors */,
                                     ),
-                                    style: FlutterFlowTheme.of(context).title1,
+                                    style: FlutterFlowTheme.of(context)
+                                        .displaySmall,
                                   ),
                                 ),
                               ],
@@ -250,7 +251,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                           FlutterFlowTheme.of(context)
                                               .secondaryText,
                                       labelStyle: FlutterFlowTheme.of(context)
-                                          .subtitle1,
+                                          .titleMedium,
                                       tabs: [
                                         Tab(
                                           text: FFLocalizations.of(context)
@@ -361,7 +362,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                           'ck3nicdq' /* Eladio Carrion */,
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
-                                                                            .subtitle1,
+                                                                            .titleMedium,
                                                                       ),
                                                                     ),
                                                                     Padding(
@@ -377,7 +378,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                           'bf5hdgam' /* Odontologo */,
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
-                                                                            .bodyText2,
+                                                                            .bodySmall,
                                                                       ),
                                                                     ),
                                                                     Padding(
@@ -393,12 +394,12 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                           'qc2lmexg' /* Cedimat */,
                                                                         ),
                                                                         style: FlutterFlowTheme.of(context)
-                                                                            .bodyText2
+                                                                            .bodySmall
                                                                             .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodyText2Family,
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
                                                                               color: Color(0xFFFE9024),
                                                                               fontSize: 12.0,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText2Family),
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
                                                                             ),
                                                                       ),
                                                                     ),
@@ -410,7 +411,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                     .radio_button_checked,
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryColor,
+                                                                    .primary,
                                                                 size: 24.0,
                                                               ),
                                                             ],
@@ -498,7 +499,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .subtitle1,
+                                                                          .titleMedium,
                                                                     ),
                                                                   ),
                                                                   Padding(
@@ -516,7 +517,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyText2,
+                                                                          .bodySmall,
                                                                     ),
                                                                   ),
                                                                   Padding(
@@ -534,16 +535,16 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyText2
+                                                                          .bodySmall
                                                                           .override(
                                                                             fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyText2Family,
+                                                                                FlutterFlowTheme.of(context).bodySmallFamily,
                                                                             color:
                                                                                 Color(0xFFFE9024),
                                                                             fontSize:
                                                                                 12.0,
                                                                             useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText2Family),
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
                                                                           ),
                                                                     ),
                                                                   ),
@@ -642,7 +643,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .subtitle1,
+                                                                          .titleMedium,
                                                                     ),
                                                                   ),
                                                                   Padding(
@@ -660,7 +661,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyText2,
+                                                                          .bodySmall,
                                                                     ),
                                                                   ),
                                                                   Padding(
@@ -678,16 +679,16 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                       ),
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .bodyText2
+                                                                          .bodySmall
                                                                           .override(
                                                                             fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyText2Family,
+                                                                                FlutterFlowTheme.of(context).bodySmallFamily,
                                                                             color:
                                                                                 Color(0xFFFE9024),
                                                                             fontSize:
                                                                                 12.0,
                                                                             useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyText2Family),
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
                                                                           ),
                                                                     ),
                                                                   ),
@@ -699,7 +700,7 @@ class _MainCustomerListCopyWidgetState extends State<MainCustomerListCopyWidget>
                                                                   .radio_button_checked,
                                                               color: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .primaryColor,
+                                                                  .primary,
                                                               size: 24.0,
                                                             ),
                                                           ],

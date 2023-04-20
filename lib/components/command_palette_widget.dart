@@ -194,7 +194,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                           ),
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
-                                                  .subtitle2,
+                                                  .titleSmall,
                                           enabledBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
                                               color: Color(0x00000000),
@@ -245,7 +245,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                                   24.0, 24.0, 0.0, 24.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .subtitle1,
+                                            .titleMedium,
                                         validator: _model
                                             .textControllerValidator
                                             .asValidator(context),
@@ -255,39 +255,8 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: FFButtonWidget(
-                                        onPressed: () async {
-                                          ScaffoldMessenger.of(context)
-                                              .showSnackBar(
-                                            SnackBar(
-                                              content: Text(
-                                                'You successfully created a job post!',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .subtitle1
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .subtitle1Family,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBtnText,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .subtitle1Family),
-                                                        ),
-                                              ),
-                                              duration:
-                                                  Duration(milliseconds: 4000),
-                                              backgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                            ),
-                                          );
-                                          Navigator.pop(context);
+                                        onPressed: () {
+                                          print('Button pressed ...');
                                         },
                                         text:
                                             FFLocalizations.of(context).getText(
@@ -303,14 +272,14 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
-                                              .subtitle2
+                                              .titleSmall
                                               .override(
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
-                                                        .subtitle2Family,
+                                                        .titleSmallFamily,
                                                 color: Colors.white,
                                                 fontSize: 14.0,
                                                 useGoogleFonts: GoogleFonts
@@ -318,7 +287,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                                     .containsKey(
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .subtitle2Family),
+                                                            .titleSmallFamily),
                                               ),
                                           elevation: 2.0,
                                           borderSide: BorderSide(
@@ -348,16 +317,16 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                     'hjidougp' /* Quick Links */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
-                                      .bodyText1
+                                      .bodyMedium
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyText1Family,
+                                            .bodyMediumFamily,
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
                                                 FlutterFlowTheme.of(context)
-                                                    .bodyText1Family),
+                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ),
@@ -404,7 +373,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                               ),
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                             ),
                                           ),
                                         ),
@@ -469,7 +438,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                                 ),
                                               ),
                                             ),
@@ -530,7 +499,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                                 ),
                                               ),
                                             ),
@@ -581,7 +550,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyText2,
+                                                      .bodySmall,
                                                 ),
                                               ),
                                             ),
@@ -617,15 +586,15 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                               '1mc23d9b' /* Recent Searches */,
                             ),
                             style: FlutterFlowTheme.of(context)
-                                .bodyText1
+                                .bodyMedium
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
+                                      .bodyMediumFamily,
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.bold,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
+                                          .bodyMediumFamily),
                                 ),
                           ),
                         ),
@@ -668,7 +637,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                           '2sfmqdfm' /* Newport Financ */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText2,
+                                            .bodySmall,
                                       ),
                                     ),
                                   ),
@@ -713,7 +682,7 @@ class _CommandPaletteWidgetState extends State<CommandPaletteWidget>
                                           'wux40wil' /* Harry Styles */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText2,
+                                            .bodySmall,
                                       ),
                                     ),
                                   ),

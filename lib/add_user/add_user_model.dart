@@ -1,19 +1,15 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/upload_data.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 
 class AddUserModel extends FlutterFlowModel {
@@ -23,33 +19,44 @@ class AddUserModel extends FlutterFlowModel {
   TextEditingController? textNombreController;
   String? Function(BuildContext, String?)? textNombreControllerValidator;
   // State field(s) for Text_Edad widget.
-  TextEditingController? textEdadController;
-  String? Function(BuildContext, String?)? textEdadControllerValidator;
-  // State field(s) for Text_Lugar_de_Nac widget.
-  TextEditingController? textLugarDeNacController;
-  String? Function(BuildContext, String?)? textLugarDeNacControllerValidator;
-  // State field(s) for Text_Num_Tel widget.
-  TextEditingController? textNumTelController;
-  String? Function(BuildContext, String?)? textNumTelControllerValidator;
-  // State field(s) for Text_Direccion widget.
-  TextEditingController? textDireccionController;
-  String? Function(BuildContext, String?)? textDireccionControllerValidator;
+  TextEditingController? textEdadController1;
+  String? Function(BuildContext, String?)? textEdadController1Validator;
+  // State field(s) for Text_Edad widget.
+  TextEditingController? textEdadController2;
+  String? Function(BuildContext, String?)? textEdadController2Validator;
+  // State field(s) for Text_Edad widget.
+  TextEditingController? textEdadController3;
+  String? Function(BuildContext, String?)? textEdadController3Validator;
   // State field(s) for Text_Fecha_de_Nac widget.
   TextEditingController? textFechaDeNacController;
+  final textFechaDeNacMask = MaskTextInputFormatter(mask: '##/##/####');
   String? Function(BuildContext, String?)? textFechaDeNacControllerValidator;
   // State field(s) for Text_Email widget.
   TextEditingController? textEmailController;
   String? Function(BuildContext, String?)? textEmailControllerValidator;
+  // State field(s) for Text_Edad widget.
+  TextEditingController? textEdadController4;
+  String? Function(BuildContext, String?)? textEdadController4Validator;
+  // State field(s) for Text_Lugar_de_Nac widget.
+  TextEditingController? textLugarDeNacController1;
+  final textLugarDeNacMask1 = MaskTextInputFormatter(mask: '(###) ###-####');
+  String? Function(BuildContext, String?)? textLugarDeNacController1Validator;
+  // State field(s) for CheckboxListTile widget.
+  bool? checkboxListTileValue1;
+  // State field(s) for CheckboxListTile widget.
+  bool? checkboxListTileValue2;
   // State field(s) for Text_Num_de_Emer widget.
   TextEditingController? textNumDeEmerController;
   String? Function(BuildContext, String?)? textNumDeEmerControllerValidator;
-  // State field(s) for Text_Cedula widget.
-  TextEditingController? textCedulaController;
-  String? Function(BuildContext, String?)? textCedulaControllerValidator;
-  bool isDataUploading = false;
-  FFUploadedFile uploadedLocalFile =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-  String uploadedFileUrl = '';
+  // State field(s) for Text_Edad widget.
+  TextEditingController? textEdadController5;
+  String? Function(BuildContext, String?)? textEdadController5Validator;
+  // State field(s) for Text_Lugar_de_Nac widget.
+  TextEditingController? textLugarDeNacController2;
+  String? Function(BuildContext, String?)? textLugarDeNacController2Validator;
+  // State field(s) for Text_Edad widget.
+  TextEditingController? textEdadController6;
+  String? Function(BuildContext, String?)? textEdadController6Validator;
 
   /// Initialization and disposal methods.
 
@@ -57,14 +64,17 @@ class AddUserModel extends FlutterFlowModel {
 
   void dispose() {
     textNombreController?.dispose();
-    textEdadController?.dispose();
-    textLugarDeNacController?.dispose();
-    textNumTelController?.dispose();
-    textDireccionController?.dispose();
+    textEdadController1?.dispose();
+    textEdadController2?.dispose();
+    textEdadController3?.dispose();
     textFechaDeNacController?.dispose();
     textEmailController?.dispose();
+    textEdadController4?.dispose();
+    textLugarDeNacController1?.dispose();
     textNumDeEmerController?.dispose();
-    textCedulaController?.dispose();
+    textEdadController5?.dispose();
+    textLugarDeNacController2?.dispose();
+    textEdadController6?.dispose();
   }
 
   /// Additional helper methods are added here.

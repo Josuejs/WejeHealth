@@ -236,7 +236,7 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                           FFLocalizations.of(context).getText(
                             '5f3u2i18' /* Congratulations! */,
                           ),
-                          style: FlutterFlowTheme.of(context).title3,
+                          style: FlutterFlowTheme.of(context).headlineSmall,
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
                         Padding(
@@ -246,7 +246,7 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                             FFLocalizations.of(context).getText(
                               'wwcxthj3' /* Now that a contract has been g... */,
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText2,
+                            style: FlutterFlowTheme.of(context).bodySmall,
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation2']!),
                         ),
@@ -278,7 +278,8 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle2,
+                                          .titleSmall,
+                                      elevation: 2.0,
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
@@ -312,7 +313,8 @@ class _ModalMessageWidgetState extends State<ModalMessageWidget>
                                       color: FlutterFlowTheme.of(context)
                                           .primaryBackground,
                                       textStyle: FlutterFlowTheme.of(context)
-                                          .subtitle1,
+                                          .titleMedium,
+                                      elevation: 2.0,
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .lineColor,

@@ -108,12 +108,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // createAccount
   {
     'lsi6s6dc': {
-      'en': 'Bienvenido!',
-      'es': '',
+      'en': 'Welcome!',
+      'es': 'Bienvenido!',
     },
     'dhmqmbpw': {
       'en': 'Use the form below to get started.',
-      'es': '',
+      'es': 'Use el siguiente formulario para comenzar.',
     },
     'balwxjt0': {
       'en': 'Email Address',
@@ -141,18 +141,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'djw66t7t': {
       'en': 'Create Account',
-      'es': '',
+      'es': 'Crear una cuenta',
     },
     'diqcmgcr': {
       'en': 'Use a social platform to continue',
-      'es': '',
-    },
-    'ehfwpsw1': {
-      'en': 'Already have an account?',
-      'es': '',
-    },
-    '6ddiwrmk': {
-      'en': 'Log In',
       'es': '',
     },
     '9a7kqnlv': {
@@ -191,8 +183,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Login
   {
     'qp3pvs3s': {
-      'en': 'Bienvenido!',
-      'es': '',
+      'en': 'Welcome!',
+      'es': 'Bienvenido!',
     },
     'jkgh1cz4': {
       'en': 'Completa el formulario para crear cuenta.',
@@ -220,11 +212,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'gspi7n5q': {
       'en': 'Login',
-      'es': '',
-    },
-    'rwnwfl7a': {
-      'en': 'Use a social platform to continue',
-      'es': '',
+      'es': 'Acceso',
     },
     'pabl6qyd': {
       'en': 'No tienes una cuenta?',
@@ -249,10 +237,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Medicar',
       'es': '',
     },
-    '4067vzsk': {
-      'en': 'Orden Médica',
-      'es': '',
-    },
     'i8g9al9b': {
       'en': 'Home',
       'es': '',
@@ -261,31 +245,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Home
   {
     'tylu0ebo': {
-      'en': 'Pacientes',
+      'en': 'Patients',
       'es': '',
     },
     'a32mitc0': {
-      'en': 'Citas',
-      'es': '',
-    },
-    '0dp1lqbj': {
-      'en': '203',
+      'en': 'Appoinments',
       'es': '',
     },
     'xy0dadhf': {
-      'en': 'Cita de Hoy',
-      'es': '',
-    },
-    '2qso3g64': {
-      'en': '1',
+      'en': 'News',
       'es': '',
     },
     'wz3y4oy7': {
-      'en': 'Tablero',
+      'en': 'Dashboard',
       'es': '',
     },
-    'tn1otd1c': {
-      'en': 'Dashboard',
+    'zb9o36ox': {
+      'en': 'Day',
+      'es': '',
+    },
+    '1ym7sp8g': {
+      'en': 'Time',
+      'es': '',
+    },
+    'tryglcil': {
+      'en': 'Daily tracker',
+      'es': '',
+    },
+    'tzla9e7u': {
+      'en': 'Progress',
       'es': '',
     },
     'khiuwdto': {
@@ -295,135 +283,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Main_customerList
   {
-    'b1shcbxd': {
-      'en': 'Pacientes',
+    'i1n5cq2i': {
+      'en': 'Patients',
       'es': '',
     },
-    'jyrkno3i': {
-      'en': 'Activos',
+    '9fdkoakn': {
+      'en': 'Search Patient...',
       'es': '',
     },
-    '2b8d96oc': {
-      'en': 'Inactivos',
-      'es': '',
-    },
-    'tmpoqgb4': {
-      'en': 'June Williamson',
-      'es': '',
-    },
-    'oyreztyf': {
-      'en': 'Sr. Account Manager',
-      'es': '',
-    },
-    'urm2hgo5': {
-      'en': 'HealthAi',
-      'es': '',
-    },
-    'eefjw6q5': {
-      'en': 'James Wiseman',
-      'es': '',
-    },
-    'nxq2phbg': {
-      'en': 'Account Manager',
-      'es': '',
-    },
-    'rvtbbjga': {
-      'en': 'HealthAi',
-      'es': '',
-    },
-    'fh9caqi0': {
-      'en': 'Customers',
+    's7fekuxt': {
+      'en': 'Option 1',
       'es': '',
     },
     'ti6g1f5j': {
       'en': '__',
-      'es': '',
-    },
-  },
-  // AddUser
-  {
-    'a64pvdrh': {
-      'en': 'Nombre',
-      'es': '',
-    },
-    'r80ti316': {
-      'en': 'Escriba nombre completo...',
-      'es': '',
-    },
-    'wmfyp6yf': {
-      'en': 'Edad',
-      'es': '',
-    },
-    'itbk6g2p': {
-      'en': 'Escriba edad...',
-      'es': '',
-    },
-    'jdp09422': {
-      'en': 'Lugar de Nacimiento',
-      'es': '',
-    },
-    'hsa482q6': {
-      'en': 'Escriba lugar de nacimiento...',
-      'es': '',
-    },
-    '5syvj5q6': {
-      'en': 'Telefóno',
-      'es': '',
-    },
-    'hw66k06q': {
-      'en': 'Numero telefonico...',
-      'es': '',
-    },
-    'dvh3knac': {
-      'en': 'Dirección',
-      'es': '',
-    },
-    'yhgttcdx': {
-      'en': 'Escriba dirección...',
-      'es': '',
-    },
-    'uy9xyr2n': {
-      'en': 'Fecha de Nacimiento',
-      'es': '',
-    },
-    'gj57sjf3': {
-      'en': 'dd/mm/yyyy..',
-      'es': '',
-    },
-    '1ljvf2i5': {
-      'en': 'Email',
-      'es': '',
-    },
-    'e4ojnurk': {
-      'en': 'Ejemplo@gmail.com',
-      'es': '',
-    },
-    'i56e2kpm': {
-      'en': 'Numero de Emergencia',
-      'es': '',
-    },
-    'tngdjcsn': {
-      'en': 'Escriba numero de emergencia...',
-      'es': '',
-    },
-    '2sijoogn': {
-      'en': 'Cedula de Identidad',
-      'es': '',
-    },
-    'p9u37vfi': {
-      'en': '40229753123',
-      'es': '',
-    },
-    'x6hrqo3d': {
-      'en': 'Agregar Foto',
-      'es': '',
-    },
-    'u9rc0nyj': {
-      'en': 'Cancelar',
-      'es': '',
-    },
-    'qf7qktyz': {
-      'en': 'Guardar',
       'es': '',
     },
   },
@@ -482,38 +355,161 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
   },
-  // userDetails
+  // AddUser
   {
-    'vtt77wbf': {
-      'en': 'Nombre de Paciente',
+    'e0f1jaaw': {
+      'en': 'Medical Record',
       'es': '',
     },
-    '6ccebq2p': {
+    'ng6urjrr': {
+      'en': 'Personal Information',
+      'es': '',
+    },
+    'reqr1tdq': {
+      'en': 'Name',
+      'es': '',
+    },
+    '03kwjo8z': {
+      'en': 'Escriba nombre completo...',
+      'es': '',
+    },
+    '010roj74': {
+      'en': 'Age',
+      'es': '',
+    },
+    'dh466qx1': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    'voy5y34h': {
+      'en': 'Weight',
+      'es': '',
+    },
+    'sgnxz3sh': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    'b4zib27p': {
+      'en': 'Gender',
+      'es': '',
+    },
+    'a0eluwpo': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    '9gbqjrds': {
+      'en': 'Fecha de Nacimiento',
+      'es': '',
+    },
+    'tv69fcan': {
+      'en': 'dd/mm/yyyy..',
+      'es': '',
+    },
+    'y8ehrznt': {
+      'en': 'Email',
+      'es': '',
+    },
+    '5zfgw70n': {
+      'en': 'Ejemplo@gmail.com',
+      'es': '',
+    },
+    'lexjextc': {
+      'en': 'Direction',
+      'es': '',
+    },
+    '78hygult': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    'h8zkmvup': {
+      'en': 'Phone Number',
+      'es': '',
+    },
+    'bqmd6i99': {
+      'en': 'Escriba lugar de nacimiento...',
+      'es': '',
+    },
+    't959nxqx': {
+      'en': 'Medical History',
+      'es': '',
+    },
+    'op4r6etn': {
       'en': 'Diabetes',
       'es': '',
     },
-    'q783twf7': {
-      'en': 'Title',
+    'hny6qxzp': {
+      'en': 'Cancer',
       'es': '',
     },
-    'rb496s71': {
-      'en': 'Diabetico',
+    '7769wia3': {
+      'en': 'Alegies (Medications & Foods)',
       'es': '',
     },
-    'r5fppbws': {
+    'v31anw83': {
+      'en': 'Escriba numero de emergencia...',
+      'es': '',
+    },
+    '056ep171': {
+      'en': 'Social History',
+      'es': '',
+    },
+    'f5og5jke': {
+      'en': 'Ocupation',
+      'es': '',
+    },
+    'flyw2jr7': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    'c4fnfbrq': {
+      'en': 'Civil State',
+      'es': '',
+    },
+    'f600ctdz': {
+      'en': 'Escriba lugar de nacimiento...',
+      'es': '',
+    },
+    'ercbyn49': {
+      'en': 'ID',
+      'es': '',
+    },
+    'di3menws': {
+      'en': 'Escriba edad...',
+      'es': '',
+    },
+    '7ulzs4rr': {
+      'en': 'Cancelar',
+      'es': '',
+    },
+    'acj0zji5': {
+      'en': 'Guardar',
+      'es': '',
+    },
+  },
+  // userDetails
+  {
+    'vtt77wbf': {
+      'en': 'Name',
+      'es': '',
+    },
+    'k1r6gpag': {
+      'en': 'Patient ID',
+      'es': '',
+    },
+    '6edkuhvn': {
+      'en': 'Medical Record',
+      'es': '',
+    },
+    'd9sk4epp': {
       'en': 'Vitals',
       'es': '',
     },
-    'f4pc80mw': {
-      'en': 'Signos Vitales',
-      'es': '',
-    },
     'wb27szc1': {
-      'en': 'Historial Medico',
+      'en': 'Medicine',
       'es': '',
     },
     '0de8pz39': {
-      'en': 'Citas Agendadas',
+      'en': 'Appointment',
       'es': '',
     },
     'mv79xa9b': {
@@ -548,116 +544,134 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
   },
-  // Schedule
+  // OnboardingPage
   {
-    'jx8vj7uk': {
-      'en': 'Calendario',
+    '01t8wq60': {
+      'en': 'Schedule an Appointment',
       'es': '',
     },
-    '9rjsmu7n': {
+    'u7czt8lg': {
+      'en': 'Real time monitoring',
+      'es': '',
+    },
+    '0wpy8ofg': {
+      'en': 'Buy and view all your favorite books you find in this library.',
+      'es': '',
+    },
+    'r5ywo3wu': {
+      'en': 'Chat anytime',
+      'es': '',
+    },
+    'l9b6m7rp': {
+      'en':
+          'Keep track of all your purchases that you have made, want to trade books in? Go ahead and list them for exchange.',
+      'es': '',
+    },
+    'h2i9rzh9': {
+      'en': 'Continue',
+      'es': '',
+    },
+  },
+  // CitasAgendadas
+  {
+    '3xbtt5iu': {
+      'en': 'Latest Appointments',
+      'es': '',
+    },
+    'mw95lfsr': {
+      'en': 'Schedule Appointments',
+      'es': '',
+    },
+    'g5hjupou': {
+      'en': 'Products',
+      'es': '',
+    },
+  },
+  // OverviewConditions
+  {
+    'i623y71j': {
+      'en': 'Overview Condition',
+      'es': '',
+    },
+    'mc5vd0c3': {
+      'en': 'Patient Vitals',
+      'es': '',
+    },
+    '2eof71f1': {
+      'en': 'Heart Rate',
+      'es': '',
+    },
+    '2xikzoeg': {
+      'en': 'Bpm',
+      'es': '',
+    },
+    'fesicn0b': {
+      'en': 'SpO2',
+      'es': '',
+    },
+    '2w0c0vvz': {
+      'en': '%',
+      'es': '',
+    },
+    'b6iuezd5': {
+      'en': 'Tempeture',
+      'es': '',
+    },
+    'ihyrx12w': {
+      'en': '37° C',
+      'es': '',
+    },
+    'fhw6qmyp': {
       'en': 'Home',
       'es': '',
     },
   },
-  // Test
+  // Profile_Doctor
   {
-    'o2pymqcl': {
-      'en': 'Andrew Daniels',
+    'jswdt804': {
+      'en': 'My Settings',
       'es': '',
     },
-    '08lqsxeg': {
-      'en': 'Completed',
+    'udhih4f2': {
+      'en': 'Terms of Service',
       'es': '',
     },
-    'romnivg4': {
-      'en': '24',
+    'hien7ecj': {
+      'en': 'Back',
       'es': '',
     },
-    'f35bl4q2': {
-      'en': 'Pending',
+    'obkd8tdv': {
+      'en': 'Log Out',
       'es': '',
     },
-    'pvpmm8e3': {
-      'en': '16',
+    '7fxom91e': {
+      'en': '[User Name]',
       'es': '',
     },
-    '1qvpehp0': {
-      'en': 'Needing Action',
+    'e0rmy530': {
+      'en': '[username@domain.com]',
       'es': '',
     },
-    'porxzb5w': {
-      'en': '426',
+  },
+  // OximeterDataList
+  {
+    'l6991f04': {
+      'en': 'Explore',
       'es': '',
     },
-    'vo1ycsn8': {
-      'en': 'Projects',
+    '3s15ovuw': {
+      'en': 'This Week',
       'es': '',
     },
-    'ifkyw7je': {
-      'en': 'UI Design Team',
+    'jwdgp6vd': {
+      'en': 'Oximeter',
       'es': '',
     },
-    'n53m9zml': {
-      'en': '4 Members',
+    'ctrustg0': {
+      'en': 'Back',
       'es': '',
     },
-    'afkwiw91': {
-      'en': 'Latest Activity',
-      'es': '',
-    },
-    '4xitp0ey': {
-      'en': 'Mon, 24',
-      'es': '',
-    },
-    '58tv21cj': {
-      'en': '4:00pm',
-      'es': '',
-    },
-    'a1iydcmr': {
-      'en': 'Marketing',
-      'es': '',
-    },
-    't7067a7a': {
-      'en': '4 Members',
-      'es': '',
-    },
-    '6vy53322': {
-      'en': 'Latest Activity',
-      'es': '',
-    },
-    'pl003gjs': {
-      'en': 'Mon, 24',
-      'es': '',
-    },
-    'uc71gkcb': {
-      'en': '4:00pm',
-      'es': '',
-    },
-    't93uroj6': {
-      'en': 'Growth & Outreach',
-      'es': '',
-    },
-    '95iabs0j': {
-      'en': '2 Members',
-      'es': '',
-    },
-    'k6xfg0w8': {
-      'en': 'Latest Activity',
-      'es': '',
-    },
-    '0vxq56qg': {
-      'en': 'Mon, 24',
-      'es': '',
-    },
-    'xtzblges': {
-      'en': '4:00pm',
-      'es': '',
-    },
-    'wel1qw4w': {
-      'en': 'My Progress',
-      'es': '',
-    },
-    '6rymar7l': {
+    '0nscunlx': {
       'en': 'Home',
       'es': '',
     },
@@ -765,20 +779,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // webNav
   {
-    '7bwdyr0a': {
-      'en': 'Search',
-      'es': '',
-    },
     '12olm3ub': {
-      'en': 'Inicio',
+      'en': 'Home',
       'es': '',
     },
     '0sxeph2d': {
-      'en': 'Customers',
+      'en': 'Patients',
       'es': '',
     },
     'ra1in90m': {
-      'en': 'Medicamentos',
+      'en': 'Appointments',
+      'es': '',
+    },
+    'g9oz2409': {
+      'en': 'Medication',
+      'es': '',
+    },
+    'vzcbnzff': {
+      'en': 'Profile',
       'es': '',
     },
   },

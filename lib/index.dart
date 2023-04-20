@@ -6,11 +6,16 @@ export '/orden_medica/orden_medica_widget.dart' show OrdenMedicaWidget;
 export '/home/home_widget.dart' show HomeWidget;
 export '/main_customer_list/main_customer_list_widget.dart'
     show MainCustomerListWidget;
-export '/add_user/add_user_widget.dart' show AddUserWidget;
 export '/main_customer_list_copy/main_customer_list_copy_widget.dart'
     show MainCustomerListCopyWidget;
+export '/add_user/add_user_widget.dart' show AddUserWidget;
 export '/user_details/user_details_widget.dart' show UserDetailsWidget;
 export '/user_details_copy/user_details_copy_widget.dart'
     show UserDetailsCopyWidget;
-export '/schedule/schedule_widget.dart' show ScheduleWidget;
-export '/test/test_widget.dart' show TestWidget;
+export '/onboarding_page/onboarding_page_widget.dart' show OnboardingPageWidget;
+export '/citas_agendadas/citas_agendadas_widget.dart' show CitasAgendadasWidget;
+export '/overview_conditions/overview_conditions_widget.dart'
+    show OverviewConditionsWidget;
+export '/profile_doctor/profile_doctor_widget.dart' show ProfileDoctorWidget;
+export '/oximeter_data_list/oximeter_data_list_widget.dart'
+    show OximeterDataListWidget;

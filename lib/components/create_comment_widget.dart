@@ -95,7 +95,7 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                   FFLocalizations.of(context).getText(
                     'j8o79th5' /* Create Note */,
                   ),
-                  style: FlutterFlowTheme.of(context).title3,
+                  style: FlutterFlowTheme.of(context).headlineSmall,
                 ),
               ),
               Padding(
@@ -104,7 +104,7 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                   FFLocalizations.of(context).getText(
                     'l85gak76' /* Find members by searching belo... */,
                   ),
-                  style: FlutterFlowTheme.of(context).bodyText2,
+                  style: FlutterFlowTheme.of(context).bodySmall,
                 ),
               ),
               Padding(
@@ -128,7 +128,7 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                         FFLocalizations.of(context).getText(
                           '94jxuy9b' /* Ricky Rodriguez */,
                         ),
-                        style: FlutterFlowTheme.of(context).subtitle1,
+                        style: FlutterFlowTheme.of(context).titleMedium,
                       ),
                     ),
                   ],
@@ -143,7 +143,7 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                     hintText: FFLocalizations.of(context).getText(
                       'e70m1yzg' /* Enter your note here... */,
                     ),
-                    hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                    hintStyle: FlutterFlowTheme.of(context).bodySmall,
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -175,7 +175,7 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                     contentPadding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 32.0, 20.0, 12.0),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyText1,
+                  style: FlutterFlowTheme.of(context).bodyMedium,
                   textAlign: TextAlign.start,
                   maxLines: 4,
                   keyboardType: TextInputType.multiline,
@@ -205,16 +205,16 @@ class _CreateCommentWidgetState extends State<CreateCommentWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        textStyle: FlutterFlowTheme.of(context)
-                            .subtitle1
-                            .override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).subtitle1Family,
-                              color: Colors.white,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).subtitle1Family),
-                            ),
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle:
+                            FlutterFlowTheme.of(context).titleMedium.override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .titleMediumFamily,
+                                  color: Colors.white,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .titleMediumFamily),
+                                ),
                         elevation: 3.0,
                         borderSide: BorderSide(
                           color: Colors.transparent,

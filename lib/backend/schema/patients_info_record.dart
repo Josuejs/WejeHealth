@@ -46,6 +46,15 @@ abstract class PatientsInfoRecord
   @BuiltValueField(wireName: 'CitaAgendada')
   DateTime? get citaAgendada;
 
+  @BuiltValueField(wireName: 'EstatusCita')
+  DocumentReference? get estatusCita;
+
+  @BuiltValueField(wireName: 'Gender')
+  bool? get gender;
+
+  @BuiltValueField(wireName: 'Desease')
+  bool? get desease;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
@@ -60,7 +69,9 @@ abstract class PatientsInfoRecord
     ..numeroDeEmergencia = ''
     ..cedula = ''
     ..lugarDeNacimiento = ''
-    ..imgProfile = '';
+    ..imgProfile = ''
+    ..gender = false
+    ..desease = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('PatientsInfo');
@@ -97,6 +108,9 @@ Map<String, dynamic> createPatientsInfoRecordData({
   String? imgProfile,
   DocumentReference? createdBy,
   DateTime? citaAgendada,
+  DocumentReference? estatusCita,
+  bool? gender,
+  bool? desease,
 }) {
   final firestoreData = serializers.toFirestore(
     PatientsInfoRecord.serializer,
@@ -113,7 +127,10 @@ Map<String, dynamic> createPatientsInfoRecordData({
         ..lugarDeNacimiento = lugarDeNacimiento
         ..imgProfile = imgProfile
         ..createdBy = createdBy
-        ..citaAgendada = citaAgendada,
+        ..citaAgendada = citaAgendada
+        ..estatusCita = estatusCita
+        ..gender = gender
+        ..desease = desease,
     ),
   );
 

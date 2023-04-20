@@ -243,7 +243,7 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                           FFLocalizations.of(context).getText(
                             '0ycf3t8z' /* Felicidades! */,
                           ),
-                          style: FlutterFlowTheme.of(context).title2,
+                          style: FlutterFlowTheme.of(context).headlineMedium,
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
                         Padding(
@@ -253,7 +253,7 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                             FFLocalizations.of(context).getText(
                               'ac308ufy' /* Usuario creado correctamente. */,
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText2,
+                            style: FlutterFlowTheme.of(context).bodySmall,
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation2']!),
                         ),
@@ -297,11 +297,11 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                                         content: Text(
                                           'You successfully sent a contract',
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText1
+                                              .bodyMedium
                                               .override(
                                                 fontFamily:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyText1Family,
+                                                        .bodyMediumFamily,
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBtnText,
@@ -310,13 +310,13 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                                                     .containsKey(
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .bodyText1Family),
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                         duration: Duration(milliseconds: 4000),
                                         backgroundColor:
                                             FlutterFlowTheme.of(context)
-                                                .secondaryColor,
+                                                .secondary,
                                       ),
                                     );
                                   },
@@ -332,8 +332,9 @@ class _ModalWelcomeWidgetState extends State<ModalWelcomeWidget>
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    textStyle:
-                                        FlutterFlowTheme.of(context).subtitle1,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium,
+                                    elevation: 2.0,
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
                                           .lineColor,

@@ -9,14 +9,15 @@ export 'api_manager.dart' show ApiCallResponse;
 
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
-class GoogleCalendarCall {
+class SensorDataCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
-      callName: 'Google Calendar',
-      apiUrl:
-          'https://developers.google.com/calendar/v3/reference/calendars/insert',
+      callName: 'Sensor Data',
+      apiUrl: 'http://10.0.0.43:5000',
       callType: ApiCallType.GET,
-      headers: {},
+      headers: {
+        'http': '//10.0.0.43:5000/get_data',
+      },
       params: {},
       returnBody: true,
       encodeBodyUtf8: false,
@@ -24,27 +25,6 @@ class GoogleCalendarCall {
       cache: false,
     );
   }
-
-  static dynamic date(dynamic response) => getJsonField(
-        response,
-        r'''$''',
-        true,
-      );
-  static dynamic email(dynamic response) => getJsonField(
-        response,
-        r'''$''',
-        true,
-      );
-  static dynamic nombre(dynamic response) => getJsonField(
-        response,
-        r'''$''',
-        true,
-      );
-  static dynamic apellido(dynamic response) => getJsonField(
-        response,
-        r'''$''',
-        true,
-      );
 }
 
 class ApiPagingParams {

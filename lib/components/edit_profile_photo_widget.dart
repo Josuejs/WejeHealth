@@ -95,7 +95,8 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                 FFLocalizations.of(context).getText(
                                   'qjmdq9j9' /* Eliminar Paciente */,
                                 ),
-                                style: FlutterFlowTheme.of(context).title2,
+                                style:
+                                    FlutterFlowTheme.of(context).headlineMedium,
                               ),
                             ),
                           ),
@@ -112,7 +113,7 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                 FFLocalizations.of(context).getText(
                                   'gzipfnjv' /* Al eliminar el usuario del pac... */,
                                 ),
-                                style: FlutterFlowTheme.of(context).bodyText2,
+                                style: FlutterFlowTheme.of(context).bodySmall,
                               ),
                             ),
                           ),
@@ -156,7 +157,7 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                               child: CircularProgressIndicator(
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryColor,
+                                                        .primary,
                                               ),
                                             ),
                                           );
@@ -208,7 +209,7 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).lineColor,
                                 textStyle:
-                                    FlutterFlowTheme.of(context).subtitle2,
+                                    FlutterFlowTheme.of(context).titleSmall,
                                 elevation: 2.0,
                                 borderSide: BorderSide(
                                   color: Colors.transparent,
@@ -230,10 +231,9 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
+                                color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
-                                    .subtitle2
+                                    .titleSmall
                                     .override(
                                       fontFamily: 'Lexend Deca',
                                       color: Colors.white,
@@ -242,7 +242,7 @@ class _EditProfilePhotoWidgetState extends State<EditProfilePhotoWidget> {
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .subtitle2Family),
+                                                  .titleSmallFamily),
                                     ),
                                 elevation: 2.0,
                                 borderSide: BorderSide(

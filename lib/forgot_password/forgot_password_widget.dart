@@ -1,4 +1,4 @@
-import '/auth/auth_util.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -138,7 +138,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
           FFLocalizations.of(context).getText(
             '5l29zrp1' /* Forgot Password */,
           ),
-          style: FlutterFlowTheme.of(context).title3,
+          style: FlutterFlowTheme.of(context).headlineSmall,
         ),
         actions: [],
         centerTitle: false,
@@ -172,7 +172,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                             FFLocalizations.of(context).getText(
                               'nuhepkcb' /* Don't remember your password? ... */,
                             ),
-                            style: FlutterFlowTheme.of(context).bodyText2,
+                            style: FlutterFlowTheme.of(context).bodySmall,
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation']!),
                         ),
@@ -190,11 +190,11 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                         labelText: FFLocalizations.of(context).getText(
                           'douoxlkl' /* Email Address */,
                         ),
-                        labelStyle: FlutterFlowTheme.of(context).bodyText2,
+                        labelStyle: FlutterFlowTheme.of(context).bodySmall,
                         hintText: FFLocalizations.of(context).getText(
                           '7rbg88pz' /* Please enter a valid email... */,
                         ),
-                        hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                        hintStyle: FlutterFlowTheme.of(context).bodySmall,
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                             color:
@@ -230,12 +230,12 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                         contentPadding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 24.0, 20.0, 24.0),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily:
-                                FlutterFlowTheme.of(context).bodyText1Family,
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             color: Color(0xFF0F1113),
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText1Family),
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       keyboardType: TextInputType.emailAddress,
                       validator: _model.emailAddressControllerValidator
@@ -258,7 +258,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                           );
                           return;
                         }
-                        await resetPassword(
+                        await authManager.resetPassword(
                           email: _model.emailAddressController.text,
                           context: context,
                         );
@@ -275,13 +275,14 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: Color(0xFFFE9024),
                         textStyle: FlutterFlowTheme.of(context)
-                            .subtitle2
+                            .titleSmall
                             .override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).subtitle2Family,
+                                  FlutterFlowTheme.of(context).titleSmallFamily,
                               color: Colors.white,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).subtitle2Family),
+                                  FlutterFlowTheme.of(context)
+                                      .titleSmallFamily),
                             ),
                         elevation: 3.0,
                         borderSide: BorderSide(

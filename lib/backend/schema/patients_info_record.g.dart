@@ -106,6 +106,28 @@ class _$PatientsInfoRecordSerializer
         ..add(serializers.serialize(value,
             specifiedType: const FullType(DateTime)));
     }
+    value = object.estatusCita;
+    if (value != null) {
+      result
+        ..add('EstatusCita')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(
+                DocumentReference, const [const FullType.nullable(Object)])));
+    }
+    value = object.gender;
+    if (value != null) {
+      result
+        ..add('Gender')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.desease;
+    if (value != null) {
+      result
+        ..add('Desease')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -179,6 +201,20 @@ class _$PatientsInfoRecordSerializer
           result.citaAgendada = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime?;
           break;
+        case 'EstatusCita':
+          result.estatusCita = serializers.deserialize(value,
+              specifiedType: const FullType(DocumentReference, const [
+                const FullType.nullable(Object)
+              ])) as DocumentReference<Object?>?;
+          break;
+        case 'Gender':
+          result.gender = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
+        case 'Desease':
+          result.desease = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -218,6 +254,12 @@ class _$PatientsInfoRecord extends PatientsInfoRecord {
   @override
   final DateTime? citaAgendada;
   @override
+  final DocumentReference<Object?>? estatusCita;
+  @override
+  final bool? gender;
+  @override
+  final bool? desease;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$PatientsInfoRecord(
@@ -237,6 +279,9 @@ class _$PatientsInfoRecord extends PatientsInfoRecord {
       this.imgProfile,
       this.createdBy,
       this.citaAgendada,
+      this.estatusCita,
+      this.gender,
+      this.desease,
       this.ffRef})
       : super._();
 
@@ -265,6 +310,9 @@ class _$PatientsInfoRecord extends PatientsInfoRecord {
         imgProfile == other.imgProfile &&
         createdBy == other.createdBy &&
         citaAgendada == other.citaAgendada &&
+        estatusCita == other.estatusCita &&
+        gender == other.gender &&
+        desease == other.desease &&
         ffRef == other.ffRef;
   }
 
@@ -283,6 +331,9 @@ class _$PatientsInfoRecord extends PatientsInfoRecord {
     _$hash = $jc(_$hash, imgProfile.hashCode);
     _$hash = $jc(_$hash, createdBy.hashCode);
     _$hash = $jc(_$hash, citaAgendada.hashCode);
+    _$hash = $jc(_$hash, estatusCita.hashCode);
+    _$hash = $jc(_$hash, gender.hashCode);
+    _$hash = $jc(_$hash, desease.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -303,6 +354,9 @@ class _$PatientsInfoRecord extends PatientsInfoRecord {
           ..add('imgProfile', imgProfile)
           ..add('createdBy', createdBy)
           ..add('citaAgendada', citaAgendada)
+          ..add('estatusCita', estatusCita)
+          ..add('gender', gender)
+          ..add('desease', desease)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -366,6 +420,19 @@ class PatientsInfoRecordBuilder
   set citaAgendada(DateTime? citaAgendada) =>
       _$this._citaAgendada = citaAgendada;
 
+  DocumentReference<Object?>? _estatusCita;
+  DocumentReference<Object?>? get estatusCita => _$this._estatusCita;
+  set estatusCita(DocumentReference<Object?>? estatusCita) =>
+      _$this._estatusCita = estatusCita;
+
+  bool? _gender;
+  bool? get gender => _$this._gender;
+  set gender(bool? gender) => _$this._gender = gender;
+
+  bool? _desease;
+  bool? get desease => _$this._desease;
+  set desease(bool? desease) => _$this._desease = desease;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -389,6 +456,9 @@ class PatientsInfoRecordBuilder
       _imgProfile = $v.imgProfile;
       _createdBy = $v.createdBy;
       _citaAgendada = $v.citaAgendada;
+      _estatusCita = $v.estatusCita;
+      _gender = $v.gender;
+      _desease = $v.desease;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -424,6 +494,9 @@ class PatientsInfoRecordBuilder
             imgProfile: imgProfile,
             createdBy: createdBy,
             citaAgendada: citaAgendada,
+            estatusCita: estatusCita,
+            gender: gender,
+            desease: desease,
             ffRef: ffRef);
     replace(_$result);
     return _$result;
